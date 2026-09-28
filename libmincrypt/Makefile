@@ -27,7 +27,7 @@ $(LIB):$(LIB_OBJS)
 	$(CP) $@ ..
 
 %.o:%.c
-	$(CROSS_COMPILE)$(CC) -o $@ $(CFLAGS) -c $< $(INC) -Werror
+	$(CROSS_COMPILE)$(CC) -o $@ $(CFLAGS) -c $< $(INC)
 
 clean:
 	$(RM) $(LIB_OBJS) $(LIB)

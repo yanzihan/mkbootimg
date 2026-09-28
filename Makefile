@@ -42,7 +42,7 @@ unpackbootimg$(EXT):unpackbootimg.o
 	$(CROSS_COMPILE)$(CC) -o $@ $^ $(LDFLAGS)
 
 %.o:%.c
-	$(CROSS_COMPILE)$(CC) -o $@ $(CFLAGS) -c $< $(INC) -Werror
+	$(CROSS_COMPILE)$(CC) -o $@ $(CFLAGS) -c $< $(INC)
 
 install:
 	install -m 755 mkbootimg$(EXT) $(PREFIX)/bin
